@@ -1,0 +1,43 @@
+class Employee:
+  def __init__(self,  idnumber, name):
+    self.idnumber = idnumber
+    self.name = name
+
+class SalaryEmployee(Employee):
+  def __init__(self, idnumber, name, salarypayroll):
+    super().__init__(idnumber, name)
+    self.salarypayroll = salarypayroll
+  def show(self):
+    print(f"Payroll for: {self.idnumber}- {self.name}   #salaryEmployee_Earns {self.salarypayroll}  \n  -Check amount: {self.salarypayroll}")
+
+class HourlyEmployee(Employee):
+  def __init__(self, idnumber, name, hourlypayroll, hours):
+    super().__init__(idnumber, name)
+    self.hourlypayroll = hourlypayroll
+    self.hours = hours
+  def show(self):
+    print(f"Payroll for: {self.idnumber}- {self.name} #salaryEmployee_Earns   \n -Check amount: {self.hourlypayroll * self.hours}")
+
+
+
+###main
+
+a = input("Enter idnumber: ")
+b = input("Enter name: ")
+x = int(input("Enter 1 if you are a SalaryEmployee or 2 if you are an HourlyEmployee: "))
+if(x==1):
+  c = input("Wage: ")
+  d = SalaryEmployee(a, b, c)
+  print("")
+  print("Calculating payroll")
+  print("===================")
+  print("")
+  d.show()
+if(x==2):
+  e = int(input("Hourly wage: "))
+  h = int(input("How many hours: "))
+  i = HourlyEmployee(a, b, e, h)
+  print("")
+  print("Calculating payroll")
+  print("===================")
+  i.show()
