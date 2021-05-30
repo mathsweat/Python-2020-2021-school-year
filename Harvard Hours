@@ -1,0 +1,7 @@
+x = int(input("What hour is it? "))
+print("It is "+str(x)+" o'clock")
+y = int(input("How many hours will pass? "))
+z = x+y
+if(z>12):
+    z=z%12
+print("In "+str(y)+" hours it will be "+str(z)+" o'clock")
