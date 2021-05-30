@@ -1,0 +1,5 @@
+x=int(input("Enter number of hours: "))
+y=int(input("Enter number of minutes: "))
+x2=x*60
+z=x2+y
+print("Total minutes: "+ str(z))
