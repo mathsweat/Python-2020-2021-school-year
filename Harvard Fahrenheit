@@ -1,0 +1,4 @@
+c = float(input("Enter celcius amount: "))
+print("Celcius: "+str(c)+" degrees")
+f = ((c*9)/5)+32
+print("Fahrenheit: "+str(f)+" degrees")
