@@ -1,0 +1,4 @@
+age=int(input("What is your age"))
+x=1
+agesum=age+x
+print("You will need this many candles for your birthday cake: " + str(agesum))
