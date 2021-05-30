@@ -1,0 +1,12 @@
+#2
+class Rectangle:
+  def __init__(self,length, width):
+    self.length = length
+    self.width = width
+  def show(self):
+    print(f"Rectangle length is {self.length} and width is {self.width}.")
+
+x = int(input("Enter length:"))
+y = int(input("Enter width:"))
+z = Rectangle(x, y)
+z.show()
