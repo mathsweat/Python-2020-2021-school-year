@@ -1,0 +1,20 @@
+fn = float(input("Enter a number: "))
+op = input("Enter an operation. Enter +,-,x,/, or ^   ")
+sn = float(input("Enter a number: "))
+if(op=="+"):
+    y=fn+sn
+    print(str(fn)+" + "+str(sn)+" = "+str(y))
+elif(op=="-"):
+    y=fn-sn
+    print(str(fn)+" - "+str(sn)+" = "+str(y))
+elif(op=="x"):
+    y=fn*sn
+    print(str(fn)+" x "+str(sn)+" = "+str(y))
+elif(op=="/"):
+    y=fn/sn
+    print(str(fn)+" / "+str(sn)+" = "+str(y))
+elif(op=="^"):
+    y=fn**sn
+    print(str(fn)+" ^ "+str(sn)+" = "+str(y))
+else:
+    print("This calculator can't do that. It isn't very complex obviously.")
