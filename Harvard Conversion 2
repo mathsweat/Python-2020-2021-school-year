@@ -1,0 +1,7 @@
+x = int(input("Enter number of hours: "))
+x2 = float(x)
+y = int(input("Enter number of minutes: "))
+y2 = float(y/60)
+z=x2+y2
+z = round(z, 2)
+print("Total hours: "+ str(z))
