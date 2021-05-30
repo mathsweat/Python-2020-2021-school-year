@@ -1,0 +1,16 @@
+from random import randint
+
+z=randint(1,100)
+x=int(input("Input a number from 1 to 100 (inclusive): "))
+while(x!=z):
+    if(x<z):
+        print("Too low")
+    elif(x>z):
+        print("Too high")
+    elif(x==z):
+        print("You guessed the number")
+        break
+    x=int(input("Input a number from 1 to 100 (inclusive): "))
+    if(x==z):
+        print("You guessed the number")
+        break
