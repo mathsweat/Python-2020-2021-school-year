@@ -1,0 +1,38 @@
+#1
+class Person:
+  def __init__(self, name, surname, address):
+    self.name = name
+    self.surname = surname
+    self.address = address
+      
+class Student(Person):
+  def __init__(self, name, surname, address, courses):
+    super().__init__(name, surname, address)
+    self.courses = courses
+
+  def show(self):
+    print(f"I am {self.name} {self.surname} and I live on {self.address}. I am currently taking {self.courses}.")
+
+class Teacher(Person):
+  def __init__(self, name, surname, address, teaching_in_courses, salary_info):
+    super().__init__(name, surname, address)
+    self.teaching_in_courses = teaching_in_courses
+    self.salary_info = salary_info
+
+  def show(self):
+    print(f"I am {self.name} {self.surname} and I live on {self.address}. I am currently teaching {self.teaching_in_courses}. My salary is {self.salary_info}.")
+
+###MAIN
+a = input("Enter first name: ")
+b = input("Enter last/surname: ")
+c = input("Enter address: ")
+d = int(input("Enter 1 if you are a student, or 2 if you are a teacher: "))
+if(d==1):
+  e = input("Enter course: ")
+  s = Student(a, b, c, e)
+  s.show()
+if(d==2):
+  f = input("Enter course that you are teaching: ")
+  g = input("input salary info: ")
+  t = Teacher(a, b, c, f, g)
+  t.show()
