@@ -1,0 +1,5 @@
+num1=int(input("Input a number"))
+num2=int(input("Input a number"))
+num3=int(input("Input a number"))
+num4=int(input("Input a number"))
+print("The average of "+str(num1)+", "+str(num2)+", "+str(num3)+", and "+str(num4)+" is "+ str((num1+num2+num3+num4)/4))
