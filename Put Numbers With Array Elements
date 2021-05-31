@@ -1,0 +1,8 @@
+w = ["Algorithm", "Logic", "Filter", "Software", "Network", "Parameters", "Analyze", "Algorithm", "Functionality", "Viruses"]
+s=[]
+for i in range(len(w)):
+    x=len(w[i])
+    s.append(x)
+    
+for j in range(len(w)):
+    print(str(s[j])+": "+str(w[j]))
