@@ -1,0 +1,13 @@
+#Gym activity list
+import random
+array1=(["Walked around neighborhood for 20 minutes","Walked around neighborhood for 25 minutes","Jogged around neighboorhood for 20 minutes","Jogged around neighboorhood for 25 minutes","Biked for 20 minutes","Biked for 25 minutes","Ping-pong for 20 minutes","Ping-pong for 25 minutes","Ran on the treadmill at 5.5 mph for 20 minutes","Ran on the treadmill at 5.5 mph for 25 minutes","Ran on the treadmill at 6mph for 20 minutes","Ran on the treadmill at 6 mph for 20 minutes"])
+mon=random.choice(array1)
+tue=random.choice(array1)
+wed=random.choice(array1)
+thur=random.choice(array1)
+fri=random.choice(array1)
+print("Monday: "+mon)
+print("Tuesday: "+tue)
+print("Wednesday: "+wed)
+print("Thursday: "+thur)
+print("Friday: "+fri)
