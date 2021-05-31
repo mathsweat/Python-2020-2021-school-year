@@ -1,0 +1,16 @@
+num=1
+name=input("Please enter next word: ")
+if(name=="STOP"):
+    print("")
+else:
+    print("#"+str(num)+": You entered "+str(name))
+while(name!="STOP"):
+    num=num+1
+    name=input("Please enter next word: ")
+    if(name!="STOP"):
+        print("#"+str(num)+": You entered "+str(name))
+num=num-1
+if(name=="STOP" and num==1):
+    print("All done. 0 words entered.")
+else:
+    print("All done. "+str(num)+" words entered.")
