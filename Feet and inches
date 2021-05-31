@@ -1,0 +1,8 @@
+feet1=int(input("Enter the Feet:"))
+in1=int(input("Enter the Inches:"))
+feet2=int(input("Enter the Feet:"))
+in2=int(input("Enter the Inches:"))
+in3=int(in1+in2)
+feet3=int(feet1+feet2)
+feetin1=int(feet3*12+in3)
+print("Feet: "+str(feetin1//12)+" Inches: "+str(feetin1%12))
