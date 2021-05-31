@@ -1,0 +1,48 @@
+#PLAY PIG
+import random
+
+turn=0
+turn2=0
+a=0
+b=0
+c=0
+d=0
+while(c<100 and d<100):
+    while(turn==0 and c<100 and d<100):
+        print("Player's turn")
+        roll=random.randint(1,6)
+        print("Roll: "+str(roll))
+        if(roll==1):
+            turn=1 
+            a=0
+        elif(roll!=1 and turn==0):
+            a=a+roll
+            turn2=input("Enter GO if you want to continue and HOLD if you want to save")
+            if(turn2=="HOLD"):
+                turn=1
+                c=c+a
+                a=0
+    print("Total score for player: "+str(c))
+    print("")
+    while(turn==1 and c<100 and d<100):
+        print("Computer's turn")
+        roll2=random.randint(1,6)
+        print("Roll: "+str(roll2))
+        if(roll2==1):
+            turn=0 
+            b=0
+        elif(roll2!=1 and turn==1):
+            b=b+roll2
+            turn3=random.choice(["GO","HOLD"])
+            if(turn3=="HOLD"):
+                turn=0
+                d=d+b
+                b=0
+    print("Total score for computer: "+str(d))
+    print("")
+if(c>=100):
+    print("Player wins")
+    c=0
+if(d>=100):
+    print("Computer wins")
+    d=0
