@@ -1,0 +1,21 @@
+#1
+import random
+
+x=random.randint(1,100)
+y=int(input("Enter an integer"))
+z=1
+while(y!=x):
+    z=z+1
+    if(y>0 and y<100):
+        if(y>x):
+            print("Too high")
+            y=int(input("Enter an integer"))
+        if(y<x):
+            print("Too low")
+            y=int(input("Enter an integer"))
+    else:
+        print("The range is 0 to 100. Guess in range.")
+        y=int(input("Enter an integer"))
+        
+print("You have found the number!!!")
+print("You guessed "+str(z)+" times")
