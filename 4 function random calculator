@@ -1,0 +1,12 @@
+import random
+num1=random.randint(1,100)
+num2=random.randint(1,100)
+num3=int(num1+num2)
+num4=int(num1-num2)
+num5=int(num1*num2)
+num6=int(num1/num2)
+num7=int(num1%num2)
+print("The sum of "+str(num1)+" and "+str(num2)+" is "+str(num3))
+print("The difference of "+str(num1)+" and "+str(num2)+" is "+str(num4))
+print("The product of "+str(num1)+" and "+str(num2)+" is "+str(num5))
+print("The quotient of "+str(num1)+" and "+str(num2)+" is "+str(num6)+" with a remainder of "+str(num7))
