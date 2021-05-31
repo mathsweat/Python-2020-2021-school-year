@@ -1,0 +1,50 @@
+import random
+array=(["Rock","Paper","Scissors"])
+
+print("Welcome to Rock-Paper-Scissors")
+
+in1=input("Player 1 input Rock, Paper, or Scissors. Type QUIT to quit")
+in2=random.choice(array)
+
+while(in1!="QUIT"):
+    print("Computer inputed: "+in2)
+    if(in1=="Rock" and in2=="Rock"):
+        print("Draw")
+        in1=input("Player 1 input Rock, Paper, or Scissors. Type QUIT to quit")
+        in2=random.choice(array)
+    elif(in1=="Rock" and in2=="Scissors"):
+        print("You win")
+        in1=input("Player 1 input Rock, Paper, or Scissors. Type QUIT to quit")
+        in2=random.choice(array)
+    elif(in1=="Rock" and in2=="Paper"):
+        print("You lose")
+        in1=input("Player 1 input Rock, Paper, or Scissors. Type QUIT to quit")
+        in2=random.choice(array)
+    elif(in1=="Scissors" and in2=="Scissors"):
+        print("Draw")
+        in1=input("Player 1 input Rock, Paper, or Scissors. Type QUIT to quit")
+        in2=random.choice(array)
+    elif(in1=="Scissors" and in2=="Paper"):
+        print("You win")
+        in1=input("Player 1 input Rock, Paper, or Scissors. Type QUIT to quit")
+        in2=random.choice(array)
+    elif(in1=="Scissors" and in2=="Rock"):
+        print("You lose")
+        in1=input("Player 1 input Rock, Paper, or Scissors. Type QUIT to quit")
+        in2=random.choice(array)
+    elif(in1=="Paper" and in2=="Paper"):
+        print("Draw")
+        in1=input("Player 1 input Rock, Paper, or Scissors. Type QUIT to quit")
+        in2=random.choice(array)
+    elif(in1=="Paper" and in2=="Rock"):
+        print("You win")
+        in1=input("Player 1 input Rock, Paper, or Scissors. Type QUIT to quit")
+        in2=random.choice(array)
+    elif(in1=="Paper" and in2=="Scissors"):
+        print("You lose")
+        in1=input("Player 1 input Rock, Paper, or Scissors. Type QUIT to quit")
+        in2=random.choice(array)
+    else:
+        print("I don't understand the input")
+        break
+print("Done. Thanks for playing!")
