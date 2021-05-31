@@ -1,0 +1,10 @@
+Import math
+#5
+#n is compunded monthly
+#p=float(input("How much money do you wish to deposit today?"))
+#t=float(input("How many years will your deposit stay? You can enter partial years as well."))
+#r=0.025
+#n=12
+#a=float((p*(1+r/n)**(n*t)))
+#a2=((math.floor(a))+1)
+#print("At 2.5% interest rate compounded monthly,\nyour ending balance will be approximately $"+str(a2)+"\n(rounded up to the nearest dollar)")
