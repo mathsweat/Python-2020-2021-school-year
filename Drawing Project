@@ -1,0 +1,150 @@
+#DRAWING PROJECT
+import random
+import simplegui
+
+x=0
+y=0
+a=0
+b=0
+c=0
+d=0
+e=0
+f=0
+g=0
+h=0
+i=0
+j=0
+k=0
+l=0
+m=0
+color="yellow"
+def draw_handler(canvas):
+    
+    #Alien ship
+    global m
+    global color
+    for n in range(1,m):
+        m=m+1
+        if(n%2==1):
+            color="orange"
+        else:    
+            color="red"
+    canvas.draw_circle((560,40), 40, 10, color, color)
+    canvas.draw_polygon([(560,20),(540,50),(580,50)],6,"black","red")
+    #Clouds
+    global x
+    global y
+    x=x+5
+    y=y+8
+    canvas.draw_circle((65+x,175), 50, 10, "white", "white")
+    canvas.draw_circle((140+x,175), 50, 10, "white", "white")
+    canvas.draw_circle((102.5+x,140), 50, 10, "white", "white")
+    canvas.draw_circle((65+y,150), 50, 10, "white", "white")
+    canvas.draw_circle((140+y,150), 50, 10, "white", "white")
+    canvas.draw_circle((102.5+y,100), 50, 10, "white", "white")
+    if(x==700):
+        x=0
+    if(y>=700):
+        y=0
+        
+    #Road
+    global a
+    a=a+1
+    canvas.draw_polygon([(0,550),(0,600),(600,600),(600,550)],10,"grey","grey")
+    canvas.draw_line((0,575),(0+a,575),15,"yellow")
+    canvas.draw_line((25+a,575),(75+a,575),15,"yellow")
+    canvas.draw_line((100+a,575),(150+a,575),15,"yellow")
+    canvas.draw_line((175+a,575),(225+a,575),15,"yellow")
+    canvas.draw_line((250+a,575),(300+a,575),15,"yellow")
+    canvas.draw_line((325+a,575),(375+a,575),15,"yellow")
+    canvas.draw_line((400+a,575),(450+a,575),15,"yellow")
+    canvas.draw_line((400+a,575),(450+a,575),15,"yellow")
+    canvas.draw_line((475+a,575),(525+a,575),15,"yellow")
+    canvas.draw_line((550+a,575),(600+a,575),15,"yellow")
+    if(a>=25):
+        a=0
+    
+    #Rocketcar
+    global b
+    global c
+    global d
+    global e
+    canvas.draw_circle((290,490-b), 25, 5, "black", "black")
+    canvas.draw_polygon([(240,490-b),(240,540-b),(360,540-b),(360,490-b)],10,"red","red")
+    canvas.draw_polygon([(360,490-b),(360,540-b),(460,560-b),(460,463-b)],5,"red","red")
+    canvas.draw_polygon([(240,495-b),(240,535-b),(150,515-b)],10,"red","red")
+    canvas.draw_polygon([(185,510-b),(185,520-b),(450,520-b),(450,510-b)],10,"blue","blue")
+    canvas.draw_circle((260,545-b), 15, 5, "black", "black")
+    canvas.draw_circle((260,545-b), 8, 5, "black", "grey")
+    canvas.draw_circle((340,545-b), 15, 5, "black", "black")
+    canvas.draw_circle((340,545-b), 8, 5, "black", "grey")
+    canvas.draw_polygon([(470,470-b),(470,497.5-b),(500+d,483.75-b)],13.5,"orange","orange")
+    canvas.draw_polygon([(470,497.5-b),(470,525-b),(500+d,511.25-b)],13.5,"orange","orange")
+    canvas.draw_polygon([(470,525-b),(470,552.5-b),(500+d,538.75-b)],13.5,"orange","orange")
+    if(b<179 and c==0):
+        b=b+2
+        if(b>=179):
+            c=1
+    if(b>=180 or c==1):
+        b=b-2
+        c=1
+        if(b==0):
+            c=0 
+    if(d<60 and e==0):
+        d=d+2
+        if(d>=60):
+            e=1
+    if(d>=61 or e==1):
+        d=d-2
+        e=1
+        if(d==0):
+            e=0  
+    
+    #Sun change
+    '''
+    for m in range(1,2):
+        m=m+1
+        if(m%2==0):
+            color="#0000FF"
+    '''    
+            
+    #Alien ship
+    global g
+    global h
+    global l
+    i=random.randint(0, 255)
+    j=random.randint(0, 255)
+    k=random.randint(0, 225)
+    color="RGB(" + str(i) + ", " + str(j) + ", " + str(k) + ")"    
+    for f in range(1,2):
+        f=f+0.75
+    g=f+g
+    if(g>=700):
+        h=0
+        l=l-1
+    canvas.draw_circle((-300+g,100+l), 30, 1, "black", "black")
+    if(g>=300):
+        h=h+1.5
+        canvas.draw_polygon([(-300+g,132+l),(-320+g,140+h+l),(-280+g,140+h+l)],1,color,color)
+    canvas.draw_circle((-300+g,125+l), 30, 1, "black", "black")
+    canvas.draw_polygon([(-200+g,100+l),(-200+g,125+l),(-400+g,125+l),(-400+g,100+l)],13.5,"grey","grey")
+    canvas.draw_circle((-200+g,112.5+l), 19.5, 1, "grey", "grey")
+    canvas.draw_circle((-400+g,112.5+l), 19.5, 1, "grey", "grey")
+    canvas.draw_polygon([(-200+g,95+l),(-230+g,95+l),(-215+g,70+l)],1,"red","red")
+    canvas.draw_polygon([(-370+g,95+l),(-400+g,95+l),(-385+g,70+l)],1,"red","red")
+    if(g>=1750):
+        g=0
+        l=0
+    
+    
+    
+    
+            
+    
+    
+#frame setting
+frame = simplegui.create_frame("Testing", 600, 600)
+frame.set_canvas_background("#8dd2fc")
+frame.set_draw_handler(draw_handler)
+
+frame.start()
