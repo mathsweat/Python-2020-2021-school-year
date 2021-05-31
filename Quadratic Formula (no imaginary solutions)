@@ -1,0 +1,31 @@
+#Quadratic formula
+#Bradley Thomas
+
+import math
+
+a2=float(input("Enter \"a\" value"))
+b2=float(input("Enter \"b\" value:"))
+c2=float(input("Enter \"c\" value"))
+
+if(a2==0): 
+    print("Equation not quadratic")
+
+else:    
+    print(str(a2)+"x^2+"+str(b2)+"x+"+str(c2))
+    d=b2**2-4*a2*c2
+    vx=(b2/a2)*-0.5
+    x2=float((-b2+math.sqrt(d))/(2*a2))
+    x3=float((-b2-math.sqrt(d))/(2*a2))
+
+
+    if(d>0):
+        print("2 solutions")
+        print("x="+str(x2))
+        print("x="+str(x3))
+
+    elif(d==0):    
+        print("1 solution")
+        print("x="+str(vx))
+    
+    elif(d<0):
+        print("No real solutions. This calculator will not output imaginary solutions.")   
