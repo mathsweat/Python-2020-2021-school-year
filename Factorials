@@ -1,0 +1,10 @@
+import math
+
+num1=int(input("Input an integer. Enter negative number to stop. Don't enter letters:"))
+while(num1>=0):
+    print("Inputed: "+str(num1))
+    x=math.factorial(num1)
+    print("Factorial: "+str(x))
+    num1=int(input("Input an integer. Enter negative number to stop. Don't enter letters:"))  
+if(num1<0):
+    print("Negative factorials are imaginary numbers. Do you seriously think I have the Python skills to output those???")
