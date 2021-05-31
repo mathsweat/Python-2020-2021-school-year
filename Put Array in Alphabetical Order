@@ -1,0 +1,11 @@
+vocab = ["Libraries", "Bandwidth", "Hierarchy", "Software", "Firewall", "Cybersecurity","Phishing", "Logic", "Productivity"]
+print(vocab)
+
+for i in range (1,len(vocab)):
+    count=i-1
+    key=vocab[i]
+    while(vocab[count]>key and count>=0):
+        vocab[count+1]=vocab[count]
+        count=count-1
+        vocab[count+1]=key
+print(vocab)
