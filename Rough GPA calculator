@@ -1,0 +1,29 @@
+def GPAcalc(x, y):
+    if((x=="a" or x=="A") and y==0):
+        return 4
+    elif((x=="b" or x=="B") and y==0):
+        return 3    
+    elif((x=="c" or x=="C") and y==0):
+        return 2
+    elif((x=="d" or x=="D") and y==0):
+        return 1
+    elif((x=="f" or x=="F") and y==0):
+        return 0
+    elif((x=="a" or x=="A") and y==1):
+        return 5
+    elif((x=="b" or x=="B") and y==1):
+        return 4    
+    elif((x=="c" or x=="C") and y==1):
+        return 3
+    elif((x=="d" or x=="D") and y==1):
+        return 2
+    elif((x=="f" or x=="F") and y==1):
+        return 1
+    else:
+        return "Invalid"
+    
+        
+a=input("Enter your Letter Grade:  ")
+b=int(input("Enter 1 if grade is weighted and 0 if not weighted: "))
+gpa=GPAcalc(a, b)
+print("Your GPA score is: "+str(gpa))
