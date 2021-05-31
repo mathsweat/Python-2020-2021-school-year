@@ -1,0 +1,23 @@
+import random
+
+foodChain=["Phytoplankton", "Zooplankton", "Artic cod", "Ringed seal", "Polar bears"]
+
+p=random.choice(foodChain)
+c=random.choice(foodChain)
+
+while(p==c):
+    p=random.choice(foodChain)
+    c=random.choice(foodChain)
+
+p2=foodChain.index(p)  
+c2=foodChain.index(c)
+
+if(p2>c2):
+    print("Player organism: "+str(p))
+    print("Computer organism: "+str(c))
+    print("Player wins")
+if(c2>p2):
+    print("Player organism: "+str(p))
+    print("Computer organism: "+str(c))
+    print("Computer wins")
+   
