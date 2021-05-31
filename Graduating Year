@@ -1,0 +1,2 @@
+num1=int(input("Type graduating year"))
+print("You have "+str(num1-2020)+" year(s) left until graduating.")
