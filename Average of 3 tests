@@ -1,0 +1,32 @@
+#3
+name=input("Enter pupil name:")
+x1=float(input("Test #1 Grade (Enter without % sign)"))
+x2=float(input("Test #2 Grade (Enter without % sign)"))
+x3=float(input("Test #3 Grade (Enter without % sign)"))
+x4=float((x1+x2+x3)/3)
+x5=round(x4)
+
+if(x5>=90 and x5<=100):
+    print(name)
+    print("A")
+    print("Test Average: "+str(x5)+"%")
+elif(x5>=80 and x5<=90):
+    print(name)
+    print("B")
+    print("Test Average: "+str(x5)+"%")
+elif(x5>=70 and x5<=80):
+    print(name)
+    print("C")
+    print("Test Average: "+str(x5)+"%")
+elif(x5>=60 and x5<=70):
+    print(name)
+    print("D")
+    print("Test Average: "+str(x5)+"%")
+elif(x5>=0 and x5<=60):
+    print(name)
+    print("F")
+    print("Test Average: "+str(x5)+"%")
+else:
+    print(name)
+    print("Invalid Entry")
+    print("N/A")
