@@ -1,0 +1,5 @@
+pos_num1=float(input("Enter a positive number: "))
+pos_num2=float(input("Enter a positive number: "))
+int_div=int(pos_num1//pos_num2)
+mod_left=float(pos_num1%pos_num2)
+print(str(pos_num1)+" divided by "+str(pos_num2)+" equals "+str(int_div)+" with a remainder of "+str(mod_left))
