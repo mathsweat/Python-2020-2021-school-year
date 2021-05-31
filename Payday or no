@@ -1,0 +1,5 @@
+day1=int(input("Enter today's day numerically: "))
+if(day1==15 or day1==30):
+    print("It's payday!")
+if(day1!=15 and day1!=30): 
+    print("Sorry, not a payday.")
