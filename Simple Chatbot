@@ -1,0 +1,32 @@
+import random
+array=(["Nice","Cool","Interesting","That is very nice","That is good to hear"])
+array2=(["That is not good","I am sorry to hear that","Oh no"])
+x=random.choice(array)
+x1=random.choice(array)
+x11=random.choice(array)
+x2=random.choice(array2)
+
+name=input("Enter your first name:")
+name2=input("Enter your last name:")
+print("Hi there "+name+" "+name2+", nice to meet you!")
+
+age=int(input("How old are you?"))
+if(age>=21):
+    print("Fun fact: you are old enough to have alcohol")
+else:
+    print(x)
+    
+hay=input("So, "+name+", are you today... good, happy, excited, sad, bad, angry, or confused")
+if(hay=="good" or hay=="happy"):
+    print(x1)
+elif(hay=="sad" or hay=="bad" or hay=="angry"):
+    print(x2)
+elif(hay=="confused"):
+    print("You should get some help")
+elif(hay=="excited"):
+    ex=input("What are you excited about "+name+":")
+    print(x11)
+else:
+    print("I am not sure what you are saying")
+    
+print("Thank you for talking to me "+name+" "+name2)
