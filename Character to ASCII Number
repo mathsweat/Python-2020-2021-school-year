@@ -1,0 +1,6 @@
+x=input("Enter a character: ")
+if(len(x)==1):
+    y=ord(x)
+    print("ASCII #"+str(y))
+else:
+    print("Not a character")
